@@ -1,6 +1,8 @@
 #include "Game.hpp"
 using namespace game;
 
+#include <iostream>
+
 /* constructors and destructors */
 
 /*
@@ -17,10 +19,13 @@ Game::Game(unsigned int width, unsigned int height, const std::string title, uns
 
     randomizeArray();
 
+    std::cout << array.size() << std::endl;
+
     /* check array */
     assert(array.size() % 5 == 0);  // assert that the array's length is a multiple of 5
-    assert(array.size() >= 5);
-    assert(array.size() <= 300);
+    assert(WIDTH % array.size() == 0);  // assert that array size is factor of window width
+    assert(array.size() >= 5);  // assert minimum array size
+    assert(array.size() <= 300); // assert maximum array size
 }
 
 Game::~Game() noexcept
@@ -126,13 +131,9 @@ void Game::run() noexcept
  */
 void Game::randomizeArray() noexcept
 {
+    srand(time(NULL));  // seed random number generation
     array = {};
 
     for (int i = 1; i <= length; i++)
-        array.push_back(i);
-    
-    shuffle(array.begin(), array.end(), std::default_random_engine(
-            std::chrono::system_clock::now().time_since_epoch().count()
-        )
-    );
+        array.push_back(rand() % (HEIGHT / UNIT_SIZE - 1) + 1);
 }
