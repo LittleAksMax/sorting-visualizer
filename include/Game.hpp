@@ -6,7 +6,9 @@
 #include <string>
 #include <vector>
 #include <assert.h>
-#include <time.h>
+#include <chrono>
+#include <algorithm>
+#include <random>
 #include "Draw.hpp"
 #include "Algorithms.hpp"
 #include "constants.hpp"

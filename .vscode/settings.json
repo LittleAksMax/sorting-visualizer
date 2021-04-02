@@ -52,6 +52,7 @@
         "xutility": "cpp",
         "chrono": "cpp",
         "random": "cpp",
-        "ratio": "cpp"
+        "ratio": "cpp",
+        "iostream": "cpp"
     }
 }

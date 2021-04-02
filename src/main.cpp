@@ -8,7 +8,7 @@ int main()
 {
     std::vector<unsigned int> array;
 
-    game::Game game(WIDTH, HEIGHT, TITLE, 150);
+    game::Game game(WIDTH, HEIGHT, TITLE, 100);
 
     game.run();
 
