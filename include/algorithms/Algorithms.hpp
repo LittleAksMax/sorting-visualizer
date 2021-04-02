@@ -13,14 +13,7 @@ enum Algorithms
     MergeSort,
     QuickSort,
     HeapSort,
-    RadixSort,
-    MySort
-    /*
-    Go through from min to max
-    Get least and highest index
-    Swap least with min and highest with max
-    min++, max--
-    */
+    RadixSort
 };
 
 }

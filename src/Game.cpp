@@ -73,8 +73,6 @@ void Game::run() noexcept
                                 break;
                             case algorithms::Algorithms::RadixSort:
                                 break;
-                            case algorithms::Algorithms::MySort:
-                                break;
                         };
                         visualized = true;
                         continue;
@@ -110,9 +108,6 @@ void Game::run() noexcept
                             break;
                         case sf::Keyboard::Num8:
                             current = algorithms::Algorithms::RadixSort;
-                            break;
-                        case sf::Keyboard::Num9:
-                            current = algorithms::Algorithms::MySort;
                             break;
                     };
                 }
