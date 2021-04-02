@@ -12,6 +12,9 @@
 #include "Draw.hpp"
 #include "Algorithms.hpp"
 
+/* sorting algorithms */
+#include "BubbleSort.hpp"
+
 
 namespace game
 {

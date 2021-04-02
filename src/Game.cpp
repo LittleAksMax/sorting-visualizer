@@ -34,6 +34,7 @@ Game::~Game() noexcept
  */
 void Game::run() noexcept
 {
+    algorithms::Algorithms current = algorithms::Algorithms::BubbleSort;  // used to see which algorithm to run
     bool visualized = false;
     while (window->isOpen())
     {
@@ -48,14 +49,67 @@ void Game::run() noexcept
                 if (!visualized)
                     if (event.key.code == sf::Keyboard::Enter) // if enter is pressed
                     {
-                        Algorithms::bubbleSort(array, *window);
+                        switch (current)
+                        {
+                            case algorithms::Algorithms::BubbleSort:
+                                algorithms::BubbleSort::sort(array, *window);
+                                break;
+                            case algorithms::Algorithms::InsertionSort:
+                                break;
+                            case algorithms::Algorithms::SelectionSort:
+                                break;
+                            case algorithms::Algorithms::CocktailShakerSort:
+                                break;
+                            case algorithms::Algorithms::MergeSort:
+                                break;
+                            case algorithms::Algorithms::QuickSort:
+                                break;
+                            case algorithms::Algorithms::HeapSort:
+                                break;
+                            case algorithms::Algorithms::RadixSort:
+                                break;
+                            case algorithms::Algorithms::MySort:
+                                break;
+                        };
                         visualized = true;
+                        continue;
                     }
-                
                 if (event.key.code == sf::Keyboard::Space)
                 {
                     randomizeArray();
                     visualized = false;  // this is so you don't re-sort a sorted array
+                } else
+                {
+                    switch (event.key.code)
+                    {
+                        case sf::Keyboard::Num1:
+                            current = algorithms::Algorithms::BubbleSort;
+                            break;
+                        case sf::Keyboard::Num2:
+                            current = algorithms::Algorithms::InsertionSort;
+                            break;
+                        case sf::Keyboard::Num3:
+                            current = algorithms::Algorithms::SelectionSort;
+                            break;
+                        case sf::Keyboard::Num4:
+                            current = algorithms::Algorithms::CocktailShakerSort;
+                            break;
+                        case sf::Keyboard::Num5:
+                            current = algorithms::Algorithms::MergeSort;
+                            break;
+                        case sf::Keyboard::Num6:
+                            current = algorithms::Algorithms::QuickSort;
+                            break;
+                        case sf::Keyboard::Num7:
+                            current = algorithms::Algorithms::HeapSort;
+                            break;
+                        case sf::Keyboard::Num8:
+                            current = algorithms::Algorithms::RadixSort;
+                            break;
+                        case sf::Keyboard::Num9:
+                            current = algorithms::Algorithms::MySort;
+                            break;
+                    };
                 }
             }
         }

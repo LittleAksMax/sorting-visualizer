@@ -4,15 +4,26 @@
 #include <vector>
 #include "Draw.hpp"
 
-namespace game
+namespace game::algorithms
 {
 
-class Algorithms
+enum Algorithms
 {
-public:
-    static void swap(std::vector<unsigned int>&, unsigned int, unsigned int) noexcept;
-
-    static void bubbleSort(std::vector<unsigned int>&, sf::RenderWindow&) noexcept;
+    BubbleSort,
+    InsertionSort,
+    SelectionSort,
+    CocktailShakerSort,
+    MergeSort,
+    QuickSort,
+    HeapSort,
+    RadixSort,
+    MySort
+    /*
+    Go through from min to max
+    Get least and highest index
+    Swap least with min and highest with max
+    min++, max--
+    */
 };
 
 }

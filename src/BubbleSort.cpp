@@ -1,10 +1,10 @@
-#include "Algorithms.hpp"
-using namespace game;
+#include "BubbleSort.hpp"
+using namespace game::algorithms;
 
 /*
  * Swaps elements at idx1 and idx2 in array
  */
-void Algorithms::swap(std::vector<unsigned int>& array, unsigned int idx1, unsigned int idx2) noexcept
+void BubbleSort::swap(std::vector<unsigned int>& array, unsigned int idx1, unsigned int idx2) noexcept
 {
     unsigned int tmp = array[idx1];
     array[idx1] = array[idx2];
@@ -15,7 +15,7 @@ void Algorithms::swap(std::vector<unsigned int>& array, unsigned int idx1, unsig
  * Performs bubble sort on array
  * @param window: window used for visualizing array mid sort
  */
-void Algorithms::bubbleSort(std::vector<unsigned int>& array, sf::RenderWindow& window) noexcept
+void BubbleSort::sort(std::vector<unsigned int>& array, sf::RenderWindow& window) noexcept
 {
     bool fullPass = false;
     while (!fullPass)
