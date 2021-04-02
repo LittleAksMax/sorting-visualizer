@@ -61,6 +61,7 @@ void Game::run() noexcept
                                 algorithms::InsertionSort::sort(array, *window);
                                 break;
                             case algorithms::Algorithms::SelectionSort:
+                                algorithms::SelectionSort::sort(array, *window);
                                 break;
                             case algorithms::Algorithms::CocktailShakerSort:
                                 break;

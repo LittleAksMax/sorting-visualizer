@@ -1,9 +1,6 @@
 #ifndef _ALGORITHMS_HPP
 #define _ALGORITHMS_HPP
 
-#include <vector>
-#include "Draw.hpp"
-
 namespace game::algorithms
 {
 

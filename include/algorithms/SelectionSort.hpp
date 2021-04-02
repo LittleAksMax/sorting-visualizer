@@ -1,5 +1,5 @@
-#ifndef _BUBBLESORT_HPP
-#define _BUBBLESORT_HPP
+#ifndef _SELECTIONSORT_HPP
+#define _SELECTIONSORT_HPP
 
 #include <vector>
 #include <SFML/Graphics.hpp>
@@ -8,7 +8,7 @@
 namespace game::algorithms
 {
 
-class BubbleSort
+class SelectionSort
 {
 public:
     static void swap(std::vector<unsigned int>&, unsigned int, unsigned int) noexcept;

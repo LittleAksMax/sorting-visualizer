@@ -3,7 +3,7 @@
 #include <vector>
 #include <assert.h>
 
-#define LENGTH 100
+#define LENGTH 200
 
 int main()
 {

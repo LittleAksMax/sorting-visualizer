@@ -2,6 +2,7 @@
 #define _INSERTIONSORT_HPP
 
 #include <vector>
+#include <SFML/Graphics.hpp>
 #include "Draw.hpp"
 
 namespace game::algorithms
