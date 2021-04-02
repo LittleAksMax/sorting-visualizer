@@ -58,6 +58,7 @@ void Game::run() noexcept
                                 algorithms::BubbleSort::sort(array, *window);
                                 break;
                             case algorithms::Algorithms::InsertionSort:
+                                algorithms::InsertionSort::sort(array, *window);
                                 break;
                             case algorithms::Algorithms::SelectionSort:
                                 break;

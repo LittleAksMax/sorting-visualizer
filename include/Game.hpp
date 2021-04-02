@@ -15,6 +15,7 @@
 
 /* sorting algorithms */
 #include "BubbleSort.hpp"
+#include "InsertionSort.hpp"
 
 
 namespace game
