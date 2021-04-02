@@ -1,0 +1,1 @@
+./bin/sort-visualizer.exe
