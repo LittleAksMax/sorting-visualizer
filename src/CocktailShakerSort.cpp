@@ -12,7 +12,7 @@ void CocktailShakerSort::swap(std::vector<unsigned int>& array, unsigned int idx
 }
 
 /*
- * Performs selection sort on array
+ * Performs cocktail shaker sort on array
  * @param window: window used for visualizing array mid sort
  */
 void CocktailShakerSort::sort(std::vector<unsigned int>& array, sf::RenderWindow& window) noexcept

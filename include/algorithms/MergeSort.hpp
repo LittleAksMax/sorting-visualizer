@@ -11,9 +11,9 @@ namespace game::algorithms
 class MergeSort
 {
 public:
-    static void swap(std::vector<unsigned int>&, unsigned int, unsigned int) noexcept;
+    static void merge(std::vector<unsigned int>&, unsigned int, unsigned int, unsigned int, sf::RenderWindow&) noexcept;
 
-    static void sort(std::vector<unsigned int>&, sf::RenderWindow&) noexcept;
+    static void sort(std::vector<unsigned int>&, unsigned int, unsigned int, sf::RenderWindow&) noexcept;
 };
 
 }

@@ -20,8 +20,8 @@ Game::Game(unsigned int width, unsigned int height, const std::string title, uns
     /* check array */
     assert(array.size() % 5 == 0);  // assert that the array's length is a multiple of 5
     assert(WIDTH % array.size() == 0);  // assert that array size is factor of window width
-    // assert(HEIGHT % array.size() == 0);  // assert that array size is factor of window height, 
-                                            // to make it always go from bottom left to top right
+    //assert(HEIGHT % array.size() == 0);  // assert that array size is factor of window height, 
+                                           // to make it always go from bottom left to top right
     assert(array.size() >= 5);  // assert minimum array size
     assert(array.size() <= 300); // assert maximum array size
 }
@@ -67,7 +67,7 @@ void Game::run() noexcept
                                 algorithms::CocktailShakerSort::sort(array, *window);
                                 break;
                             case algorithms::Algorithms::MergeSort:
-                                algorithms::MergeSort::sort(array, *window);
+                                algorithms::MergeSort::sort(array, 0, array.size() - 1, *window);
                                 break;
                             case algorithms::Algorithms::QuickSort:
                                 algorithms::QuickSort::sort(array, *window);
