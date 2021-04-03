@@ -67,12 +67,16 @@ void Game::run() noexcept
                                 algorithms::CocktailShakerSort::sort(array, *window);
                                 break;
                             case algorithms::Algorithms::MergeSort:
+                                algorithms::MergeSort::sort(array, *window);
                                 break;
                             case algorithms::Algorithms::QuickSort:
+                                algorithms::QuickSort::sort(array, *window);
                                 break;
                             case algorithms::Algorithms::HeapSort:
+                                algorithms::HeapSort::sort(array, *window);
                                 break;
                             case algorithms::Algorithms::RadixSort:
+                                algorithms::RadixSort::sort(array, *window);
                                 break;
                         };
                         visualized = true;
