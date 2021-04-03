@@ -27,7 +27,7 @@ void SelectionSort::sort(std::vector<unsigned int>& array, sf::RenderWindow& win
         for (j = i + 1; j < array.size(); j++)
         {
             // draw
-            Draw::draw(array, window, { (unsigned int)i, (unsigned int)j }, array.size());
+            Draw::draw(array, window, { (unsigned int)i, (unsigned int)j });
             if (array[j] < array[min])
                 min = j;
         }

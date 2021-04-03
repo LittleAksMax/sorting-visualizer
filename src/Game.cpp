@@ -28,11 +28,11 @@ Game::Game(unsigned int width, unsigned int height, const std::string title, uns
 
 Game::~Game() noexcept
 {
-
+    delete window;
 }
 
 /*
- * Runs application
+ * Application mainloop
  * @param array: the array that is going to be drawn and sorted
  */
 void Game::run() noexcept
@@ -64,6 +64,7 @@ void Game::run() noexcept
                                 algorithms::SelectionSort::sort(array, *window);
                                 break;
                             case algorithms::Algorithms::CocktailShakerSort:
+                                algorithms::CocktailShakerSort::sort(array, *window);
                                 break;
                             case algorithms::Algorithms::MergeSort:
                                 break;
@@ -115,14 +116,14 @@ void Game::run() noexcept
         }
 
         // draw
-        Draw::draw(array, *window, {}, length);
+        Draw::draw(array, *window, {}); // nothing to be examined so {} parameter
     } 
 }
 
 /* extras */
 
 /*
- * 
+ * Creates random array to sort
  */
 void Game::randomizeArray() noexcept
 {

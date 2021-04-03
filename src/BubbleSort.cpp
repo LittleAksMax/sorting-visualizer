@@ -30,7 +30,7 @@ void BubbleSort::sort(std::vector<unsigned int>& array, sf::RenderWindow& window
             }
 
             // draw
-            Draw::draw(array, window, { (unsigned int)i - 1, (unsigned int)i }, array.size());
+            Draw::draw(array, window, { (unsigned int)i - 1, (unsigned int)i });
         }
     }
 }

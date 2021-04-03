@@ -11,7 +11,7 @@ namespace game
 class Draw
 {
 public:
-    static void draw(std::vector<unsigned int>, sf::RenderWindow&, std::vector<unsigned int>, unsigned int length) noexcept;
+    static void draw(std::vector<unsigned int>, sf::RenderWindow&, std::vector<unsigned int>) noexcept;
 };
 
 }

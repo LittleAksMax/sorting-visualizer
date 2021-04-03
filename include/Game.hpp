@@ -5,10 +5,10 @@
 #include <SFML/Graphics.hpp>
 #include <string>
 #include <vector>
-#include <assert.h>
-#include <chrono>
-#include <algorithm>
-#include <random>
+#include <assert.h> // to assert that the length of the array matches criteria
+#include <chrono> // for random seed generation for shuffle()
+#include <algorithm> // for shuffle()
+#include <random> // for random seed generation for shuffle()
 #include "Draw.hpp"
 #include "Algorithms.hpp"
 #include "constants.hpp"
@@ -17,7 +17,7 @@
 #include "BubbleSort.hpp"
 #include "InsertionSort.hpp"
 #include "SelectionSort.hpp"
-
+#include "CocktailShakerSort.hpp"
 
 namespace game
 {

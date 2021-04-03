@@ -8,8 +8,9 @@ using namespace game;
  * @param examined: the node/s currently being examined
  * @param window: the window to draw on
  */
-void Draw::draw(std::vector<unsigned int> array, sf::RenderWindow& window, std::vector<unsigned int> examined, unsigned int length) noexcept
+void Draw::draw(std::vector<unsigned int> array, sf::RenderWindow& window, std::vector<unsigned int> examined) noexcept
 {
+    unsigned int length = array.size();
     window.clear();
     unsigned int unit_size = HEIGHT / length;
     for (int i = 0; i < length; i++)

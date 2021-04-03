@@ -26,7 +26,7 @@ void InsertionSort::sort(std::vector<unsigned int>& array, sf::RenderWindow& win
             array[j + 1] = array[j];
             j--;
             // draw
-            Draw::draw(array, window, { (unsigned int)i, (unsigned int)j }, array.size());
+            Draw::draw(array, window, { (unsigned int)i, (unsigned int)j });
         }
         array[j + 1] = key;
     }
