@@ -11,9 +11,7 @@ enum Algorithms
     SelectionSort,
     CocktailShakerSort,
     MergeSort,
-    QuickSort,
-    HeapSort,
-    RadixSort
+    QuickSort
 };
 
 }

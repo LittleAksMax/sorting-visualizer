@@ -13,7 +13,9 @@ class QuickSort
 public:
     static void swap(std::vector<unsigned int>&, unsigned int, unsigned int) noexcept;
 
-    static void sort(std::vector<unsigned int>&, sf::RenderWindow&) noexcept;
+    static unsigned int partition(std::vector<unsigned int>&, unsigned int, unsigned int, sf::RenderWindow&) noexcept;
+
+    static void sort(std::vector<unsigned int>&, unsigned int, unsigned int, sf::RenderWindow&) noexcept;
 };
 
 }

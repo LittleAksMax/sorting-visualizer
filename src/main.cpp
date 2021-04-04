@@ -1,7 +1,7 @@
 #include "Game.hpp"
 #include "constants.hpp"
 
-#define LENGTH 450
+#define LENGTH 300
 
 int main()
 {

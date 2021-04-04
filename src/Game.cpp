@@ -70,13 +70,7 @@ void Game::run() noexcept
                                 algorithms::MergeSort::sort(array, 0, array.size() - 1, *window);
                                 break;
                             case algorithms::Algorithms::QuickSort:
-                                algorithms::QuickSort::sort(array, *window);
-                                break;
-                            case algorithms::Algorithms::HeapSort:
-                                algorithms::HeapSort::sort(array, *window);
-                                break;
-                            case algorithms::Algorithms::RadixSort:
-                                algorithms::RadixSort::sort(array, *window);
+                                algorithms::QuickSort::sort(array, 0, array.size() - 1, *window);
                                 break;
                         };
                         visualized = true;
@@ -107,12 +101,6 @@ void Game::run() noexcept
                             break;
                         case sf::Keyboard::Num6:
                             current = algorithms::Algorithms::QuickSort;
-                            break;
-                        case sf::Keyboard::Num7:
-                            current = algorithms::Algorithms::HeapSort;
-                            break;
-                        case sf::Keyboard::Num8:
-                            current = algorithms::Algorithms::RadixSort;
                             break;
                     };
                 }

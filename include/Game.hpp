@@ -20,8 +20,6 @@
 #include "CocktailShakerSort.hpp"
 #include "MergeSort.hpp"
 #include "QuickSort.hpp"
-#include "HeapSort.hpp"
-#include "RadixSort.hpp"
 
 namespace game
 {
