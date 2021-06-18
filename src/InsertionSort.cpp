@@ -1,11 +1,7 @@
 #include "InsertionSort.hpp"
 using namespace game::algorithms;
 
-/*
- * Performs insertion sort on array
- * @param window: window used for visualizing array mid sort
- */
-void InsertionSort::sort(std::vector<unsigned int>& array, sf::RenderWindow& window) noexcept
+void InsertionSort::sort(std::vector<unsigned int> &array, sf::RenderWindow &window) noexcept
 {
     for (int i = 1; i < array.size(); i++)
     {
@@ -16,7 +12,7 @@ void InsertionSort::sort(std::vector<unsigned int>& array, sf::RenderWindow& win
             array[j + 1] = array[j];
             j--;
             // draw
-            Draw::draw(array, window, { (unsigned int)i, (unsigned int)j });
+            Draw::draw(array, window, {(unsigned int)i, (unsigned int)j});
         }
         array[j + 1] = key;
     }

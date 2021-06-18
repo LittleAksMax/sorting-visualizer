@@ -8,13 +8,15 @@
 namespace game::algorithms
 {
 
-class InsertionSort
-{
-public:
-
-    static void sort(std::vector<unsigned int>&, sf::RenderWindow&) noexcept;
-    
-};
+    class InsertionSort
+    {
+    public:
+        /*
+         * Performs insertion sort on array
+         * @param window: window used for visualizing array mid sort
+         */
+        static void sort(std::vector<unsigned int> &, sf::RenderWindow &) noexcept;
+    };
 
 }
 

@@ -1,14 +1,13 @@
 #ifndef _GAME_HPP
 #define _GAME_HPP
 
-
 #include <SFML/Graphics.hpp>
 #include <string>
 #include <vector>
-#include <assert.h> // to assert that the length of the array matches criteria
-#include <chrono> // for random seed generation for shuffle()
+#include <assert.h>  // to assert that the length of the array matches criteria
+#include <chrono>    // for random seed generation for shuffle()
 #include <algorithm> // for shuffle()
-#include <random> // for random seed generation for shuffle()
+#include <random>    // for random seed generation for shuffle()
 #include "Draw.hpp"
 #include "Algorithms.hpp"
 #include "constants.hpp"
@@ -24,28 +23,44 @@
 namespace game
 {
 
-class Game
-{
-private:
-    unsigned int width, height;
-    std::string title;
-    sf::RenderWindow* window;
-    std::vector<unsigned int> array;
-    unsigned int length; 
-public:
-    /* constructors and destructors */
-    Game(unsigned int, unsigned int, const std::string, unsigned int) noexcept;
+    class Game
+    {
+    private:
+        unsigned int width, height;
+        std::string title;
+        sf::RenderWindow *window;
+        std::vector<unsigned int> array;
+        unsigned int length;
 
-    ~Game() noexcept;
+    public:
+        /* constructors and destructors */
 
-    /* State methods */
+        /*
+         * Creates window object with width, height and title given
+         * @param width: width of window
+         * @param height: height of window
+         * @param title: title of window
+         * @param length: length of array to visualize
+         */
+        Game(unsigned int, unsigned int, const std::string, unsigned int) noexcept;
 
-    void run() noexcept;
+        ~Game() noexcept;
 
-    /* extra */
+        /* State methods */
 
-    void randomizeArray() noexcept;
-};
+        /*
+         * Application mainloop
+         * @param array: the array that is going to be drawn and sorted
+         */
+        void run() noexcept;
+
+        /* extra */
+
+        /*
+         * Creates random array to sort
+         */
+        void randomizeArray() noexcept;
+    };
 
 }
 

@@ -8,13 +8,20 @@
 namespace game::algorithms
 {
 
-class SelectionSort
-{
-public:
-    static void swap(std::vector<unsigned int>&, unsigned int, unsigned int) noexcept;
+    class SelectionSort
+    {
+    public:
+        /*
+         * Swaps elements at idx1 and idx2 in array
+         */
+        static void swap(std::vector<unsigned int> &, unsigned int, unsigned int) noexcept;
 
-    static void sort(std::vector<unsigned int>&, sf::RenderWindow&) noexcept;
-};
+        /*
+         * Performs selection sort on array
+         * @param window: window used for visualizing array mid sort
+         */
+        static void sort(std::vector<unsigned int> &, sf::RenderWindow &) noexcept;
+    };
 
 }
 
