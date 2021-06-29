@@ -11,7 +11,7 @@ CFLAGS=
 CC=g++.exe
 
 # Find all source files in the source directory, sorted by most recently modified
-SRCS = $(shell find $(SRC_PATHS) -name '*.$(SRC_EXT)' | sort -k 1nr | cut -f2-)
+SRCS = $(shell find $(SRC_PATHS SRC_PATHS/**) -name '*.$(SRC_EXT)' | sort -k 1nr | cut -f2-)
 
 # Set the object file names, with the source directory stripped
 # from the path, and the build path prepended in its place
@@ -33,4 +33,4 @@ $(BUILD_PATH)/%.o: $(SRC_PATHS)/%.$(SRC_EXT)
 	$(CC) $(CFLAGS) $(INCLUDE_PATHS) -c $< -o $@
 
 clean:
-	rm -rf ./bin/*.exe ./build/*.o ./build/*.d
+	rm -rf ./bin/*.exe ./build/*.o ./build/algorithms/*.o ./build/**.d
