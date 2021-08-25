@@ -8,7 +8,7 @@ INCLUDE_PATHS=-I./include -I./include/algorithms
 LIB_PATHS=-L./lib
 LIBS=-lopenal32 -lsfml-audio -lsfml-graphics -lsfml-main -lsfml-network -lsfml-system -lsfml-window
 CFLAGS=
-CC=g++.exe
+CC=g++
 
 # Find all source files in the source directory, sorted by most recently modified
 SRCS = $(shell find $(SRC_PATHS SRC_PATHS/**) -name '*.$(SRC_EXT)' | sort -k 1nr | cut -f2-)
